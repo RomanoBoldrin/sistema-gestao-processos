@@ -14,7 +14,8 @@
     "lint:prettier:fix": "prettier . --write --ignore-path=.prettierignore",
     "lint:eslint:check": "eslint . --max-warnings=0",
     "test": "jest --runInBand",
-    "test:watch": "jest --watchAll --runInBand --verbose"
+    "test:watch": "jest --watchAll --runInBand --verbose",
+    "prepare": "husky"
   },
   "dependencies": {
     "@prisma/adapter-pg": "7.8.0",
@@ -27,13 +28,15 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "20.5.3",
+    "@commitlint/config-conventional": "20.5.3",
     "@tailwindcss/postcss": "4",
     "eslint": "9",
     "eslint-config-next": "16.2.4",
     "husky": "9.1.7",
     "jest": "30.3.0",
     "prettier": "3.8.3",
-    "prisma": "^7.8.0",
+    "prisma": "7.8.0",
     "tailwindcss": "4"
   }
 }
