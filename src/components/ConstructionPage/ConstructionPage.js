@@ -24,7 +24,7 @@ export default function ConstructionPage({
       <main className={styles.page}>
         <div className={styles.card}>
           <header className={styles.brand}>
-            <div className={styles.logo}>em</div>
+            <div className={styles.logo}>e</div>
 
             <div>
               <p className={styles.brandName}>{appName}</p>
