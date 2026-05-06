@@ -1,7 +1,19 @@
+/*
+This file defines the root directory for this project
+
+Reference the docs:
+- https://code.visualstudio.com/docs/languages/jsconfig
+- https://nextjs.org/docs/pages/getting-started/installation
+
+*/
+
 {
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
-  }
+  },
+  "exclude": ["node_modules"]
 }
