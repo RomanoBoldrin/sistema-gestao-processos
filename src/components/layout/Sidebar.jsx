@@ -193,14 +193,29 @@ export function Sidebar() {
 
         <ul className="space-y-1">
           <li>
-            <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-slate-800 hover:text-white transition-all duration-200 group">
-              <div className="w-8 h-8 rounded-lg bg-slate-800 group-hover:bg-slate-700 flex items-center justify-center flex-shrink-0">
+            <Link
+              href="/settings"
+              className={cn(
+                "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 group",
+                router.pathname === "/settings"
+                  ? "bg-blue-600 text-white shadow-lg shadow-blue-900/30"
+                  : "text-slate-400 hover:bg-slate-800 hover:text-white",
+              )}
+            >
+              <div
+                className={cn(
+                  "w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0",
+                  router.pathname === "/settings"
+                    ? "bg-white/20"
+                    : "bg-slate-800 group-hover:bg-slate-700",
+                )}
+              >
                 <Settings className="w-4 h-4" />
               </div>
               <span className="font-medium" style={{ fontSize: "13px" }}>
                 Configurações
               </span>
-            </button>
+            </Link>
           </li>
         </ul>
       </nav>
@@ -229,7 +244,9 @@ export function Sidebar() {
             </p>
           </div>
 
-          <LogOut className="w-4 h-4 text-slate-500 group-hover:text-slate-300 transition-colors flex-shrink-0" />
+          <Link href="/login" title="Sair">
+            <LogOut className="w-4 h-4 text-slate-500 group-hover:text-slate-300 transition-colors flex-shrink-0" />
+          </Link>
         </div>
       </div>
     </aside>
