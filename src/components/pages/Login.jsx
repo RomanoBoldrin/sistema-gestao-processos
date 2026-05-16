@@ -176,13 +176,6 @@ export function Login() {
                 </>
               )}
             </button>
-
-            <p
-              className="text-center text-slate-500"
-              style={{ fontSize: "12px" }}
-            >
-              Credenciais de demonstração: admin@direitopublico.com / admin123
-            </p>
           </form>
         </div>
 
